@@ -191,7 +191,7 @@ function App() {
             <div className="logo"/>
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                 <Menu.Item key="1" icon={<PieChartOutlined/>}>
-                    Option 1
+                    Chan
                 </Menu.Item>
                 <Menu.Item key="2" icon={<DesktopOutlined/>}>
                     Option 2
@@ -221,7 +221,7 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
-            <Footer style={{textAlign: 'center'}}>By Chan</Footer>
+            <Footer style={{textAlign: 'center'}}>By CHRISTIAN VILLARUEL</Footer>
         </Layout>
     </Layout>
 }
