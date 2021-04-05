@@ -18,7 +18,7 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public void addStudent(Student student) {
+    public void createStudent(Student student) {
 
         List studentExists = studentRepository.findStudentByEmail(student.getEmail());
 

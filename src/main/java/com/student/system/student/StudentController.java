@@ -23,7 +23,7 @@ public class StudentController {
 
     @PostMapping
     public void addStudent(@Valid @RequestBody Student student) {
-        studentService.addStudent(student);
+        studentService.createStudent(student);
     }
 
     @DeleteMapping(path = "{studentId}")
