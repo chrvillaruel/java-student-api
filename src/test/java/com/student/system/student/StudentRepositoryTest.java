@@ -14,7 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class StudentRepositoryTest {
 
     @Autowired
-    private StudentRepository underTest;
+    private StudentRepository studentRepository;
 
 
 
@@ -28,12 +28,25 @@ class StudentRepositoryTest {
                 Gender.FEMALE
         );
 
-        underTest.save(student);
+        studentRepository.save(student);
 
         // when
-        List<Student> expected = underTest.findStudentByEmail(email);
+        List<Student> expected = studentRepository.findStudentByEmail(email);
 
         // then
         assertThat(expected.size() > 0).isTrue();
+    }
+
+
+    @Test
+    void itShouldCheckIfStudentEmailDoesNotExists() {
+        // given
+        String email = "chan@gmail.com";
+
+        // when
+        List<Student> expected = studentRepository.findStudentByEmail(email);
+
+        // then
+        assertThat(expected.isEmpty()).isTrue();
     }
 }
